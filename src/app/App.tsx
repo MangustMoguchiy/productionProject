@@ -16,7 +16,6 @@ const App = () => {
             </button>
             <Navbar/>
             <AppRouter>
-
             </AppRouter>
         </div>
     );
