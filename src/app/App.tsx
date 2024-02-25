@@ -3,7 +3,6 @@ import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "shared/aliases/classNames";
 import {AppRouter} from "app/providers/router";
 import Navbar from "widgets/Navbar";
-
 const App = () => {
     const {theme,toggleTheme} = useTheme();
 
