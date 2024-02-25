@@ -1,2 +1,2 @@
-import {AppLink} from "shared/ui/AppLink/AppLink";
+import {AppLink} from "shared/ui/AppLink";
 export {AppLink}
