@@ -1,3 +1,3 @@
-import {AppLink} from "shared/ui/AppLink/ui/AppLink";
+import { AppLink } from 'shared/ui/AppLink/ui/AppLink';
 
-export {AppLink}
+export { AppLink };

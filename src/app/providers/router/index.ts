@@ -1,2 +1,3 @@
-import AppRouter from "app/providers/router/ui/AppRouter";
-export {AppRouter}
+import AppRouter from 'app/providers/router/ui/AppRouter';
+
+export { AppRouter };
