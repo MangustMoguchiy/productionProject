@@ -40,6 +40,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'react/button-has-type': 'off',
         'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'max-len': ['error', { code: 120 }],
     },
     globals: {
         __IS_DEV__: true,
