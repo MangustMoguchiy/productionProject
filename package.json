@@ -13,7 +13,8 @@
     "lint:scss": "npx stylelint \"**/*.scss\"",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "screenshot": "npx storycap http://localhost:6006"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +30,6 @@
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
-    "@storybook/client-api": "^7.6.17",
     "@storybook/react": "^7.6.17",
     "@storybook/react-webpack5": "^7.6.17",
     "@storybook/test": "^7.6.17",
@@ -93,10 +93,12 @@
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.5.0",
+    "puppeteer": "^22.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.0.5",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "storycap": "^4.2.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
