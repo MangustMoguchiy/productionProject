@@ -1,7 +1,11 @@
+// @ts-ignore
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+// @ts-ignore
 import webpack from 'webpack'
 import { type buildOptions } from './types/buildOptions'
+// @ts-ignore
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+// @ts-ignore
 import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 export default function buildPlugins ({ paths, isDev }: buildOptions): webpack.WebpackPluginInstance[] {

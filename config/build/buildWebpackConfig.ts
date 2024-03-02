@@ -1,4 +1,5 @@
 import {buildOptions} from "./types/buildOptions";
+// @ts-ignore
 import webpack from "webpack";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";

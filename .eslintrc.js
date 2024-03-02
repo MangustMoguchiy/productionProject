@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -46,17 +47,17 @@ module.exports = {
                 ignoreAttribute: ['data-testid'],
             },
         ],
-        'max-len': ['error', { code: 120 }],
-
+        'max-len': ['error', { ignorePattern: 'd="([\\s\\S]*?)"', ignoreComments: true, code: 120 }],
     },
     globals: {
         __IS_DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: ['**/src/**/*.test.{ts,tsx}', '*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
             rules: {
                 'i18next/no-literal-string': 'off',
+                'storybook/hierarchy-separator': 'error',
             },
         },
     ],

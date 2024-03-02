@@ -1,34 +1,18 @@
-import * as webpack from "webpack";
-import * as MiniCssExtractPlugin from "mini-css-extract-plugin";
+// @ts-ignore
+import webpack from "webpack";
+// @ts-ignore
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {buildOptions} from "./types/buildOptions";
+import buildScssLoader from "./loaders/buildScssLoader";
+import buildSvgLoader from "./loaders/buildSvgLoader";
 export function buildLoaders(options:buildOptions):webpack.RuleSetRule[] {
     const typescriptLoader =  {
             test: /\.tsx?$/,
             use: 'ts-loader',
             exclude: /node_modules/,
     }
-    const sassLoader = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            options.isDev? 'style-loader': MiniCssExtractPlugin.loader,
-            {
-                loader:"css-loader",
-                options: {
-                    modules: {
-                        auto: /[A-Za-z]+\.module\.(sass|scss|css)+/i,
-                        localIdentName:options.isDev
-                            ?"[path][name]__[local]--[hash:base64:5]":
-                            "[hash:base64:8]"
-                    }
-                }
-            },
-            "sass-loader",
-        ]
-    }
-    const svgLoader = {
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-    }
+    const sassLoader = buildScssLoader(options.isDev)
+    const svgLoader = buildSvgLoader()
 
     const fileLoader = {
             test: /\.(png|jpe?g|gif|woff|woff2)$/i,
