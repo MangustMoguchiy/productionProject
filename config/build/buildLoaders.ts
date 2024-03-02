@@ -1,5 +1,5 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import * as webpack from "webpack";
+import * as MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {buildOptions} from "./types/buildOptions";
 export function buildLoaders(options:buildOptions):webpack.RuleSetRule[] {
     const typescriptLoader =  {
