@@ -8,7 +8,6 @@ const config: StorybookConfig = {
         '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
         'storybook-css-modules',
-        'storycap',
     ],
     framework: {
         name: '@storybook/react-webpack5',

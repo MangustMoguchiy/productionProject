@@ -1,5 +1,4 @@
 import type { Preview } from '@storybook/react';
-import { withScreenshot } from 'storycap';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 
 const preview: Preview = {
@@ -12,6 +11,6 @@ const preview: Preview = {
             },
         },
     },
-    decorators: [StyleDecorator, withScreenshot()],
+    decorators: [StyleDecorator],
 };
 export default preview;
